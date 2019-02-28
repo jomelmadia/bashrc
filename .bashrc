@@ -1,8 +1,14 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+
+# Other additional aliases 
+source ~/.additional_alias/*
+
 # for examples
 
 # If not running interactively, don't do anything
+
 case $- in
     *i*) ;;
       *) return;;
@@ -125,7 +131,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-#update system
+#update shortcut
 alias suup='sudo apt update && sudo apt upgrade -y'
 
 #git 
@@ -145,25 +151,30 @@ alias cdinv='cd ~/development/inventory_system'
 alias cdbai='cd ~/development/bai-rails5'
 alias cdpc='cd ~/development/pc-api'
 alias opta='cd ~/teravibe/opta'
-#rails routes
-# alias ra
 
 alias tmuxload='tmux source-file ~/dotfiles/.tmux.conf'
 alias pingg='ping 8.8.8.8'
 
 alias cheatsh='cd ~/Documents/cheatsheets'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # ALWAYS PROMPT REMOVE -- DON'T BE Stupid
 alias rm="rm -i"
 
-alias btc='/home/jomel/dev/ruby/ruby_api.rb'
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias btc='/home/$USER/dev/ruby/ruby_api.rb'
 
 alias gitcheat="cat /home/$USER/cheatsheets/git_cheatsheet/git_cheatsheet"
-alias editvimcheat=" vim /home/$USER/cheatsheets/vim_cheatsheet/vim_cheatsheet
-"
 alias chromeclear="rm -rf ~/.cache/google-chrome"
+alias cpvimrc="cp /home/$USER/.vimrc /home/$USER/github/vim_dotfile/"
+alias cpbashrc="cp /home/$USER/.bashrc /home/$USER/github/bashrc/"
+
+alias editvimcheat=" vim /home/$USER/cheatsheets/vim_cheatsheet/vim_cheatsheet"
+alias editdockercheat=" vim /home/$USER/cheatsheets/docker_cheatsheet/docker_cheatsheet"
+alias editbashrc="vim /home/$USER/.bashrc"
+alias editvimrc="vim /home/$USER/.vimrc"
+
+#calendar
+alias caly="cal -y"
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
