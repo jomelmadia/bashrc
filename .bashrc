@@ -127,7 +127,7 @@ fi
 #  P
 # 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -139,9 +139,9 @@ alias gprom='git pull --rebase origin master'
 alias gb='git branch'
 alias gst='git status'
 alias gl='git log --abbrev-commit --stat'
-alias gl1='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s"'
+alias gl1='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s" --date=format:"%a %D"'
 alias gd='git diff'
-
+alias gitgraph='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias mc='EDITOR=sublime mc'
 
 alias cdr='cd ~/ruby'
@@ -169,12 +169,19 @@ alias cpbashrc="cp /home/$USER/.bashrc /home/$USER/github/bashrc/"
 
 alias editvimcheat=" vim /home/$USER/cheatsheets/vim_cheatsheet/vim_cheatsheet"
 alias editdockercheat=" vim /home/$USER/cheatsheets/docker_cheatsheet/docker_cheatsheet"
+alias editgitcheat=" vim /home/$USER/cheatsheets/git_cheatsheet/git_cheatsheet"
 alias editbashrc="vim /home/$USER/.bashrc"
 alias editvimrc="vim /home/$USER/.vimrc"
-
+alias todo="vim ~/$USER/Desktop/TODO"
 #calendar
 alias caly="cal -y"
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+
+
+# Rails laziness
+alias rdbcms="rails db:create && rails db:migrate && rails db:seed"
+alias rdbm="rails db:migrate"
