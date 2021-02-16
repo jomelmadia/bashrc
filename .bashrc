@@ -144,36 +144,25 @@ alias gl1='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN
 alias gd='git diff'
 alias gprod='git pull --rebase origin develop'
 alias gitgraph='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias mc='EDITOR=sublime mc'
 alias gp='git push origin HEAD'
 alias cdd='cd ~/development'
-alias cdinv='cd ~/development/inventory_system'
-alias cdpc='cd ~/development/pc-api'
-alias opta='cd ~/teravibe/opta'
 
 alias tmuxload='tmux source-file ~/dotfiles/.tmux.conf'
 alias pingg='ping 8.8.8.8'
 
-alias cheatsh='cd ~/Documents/cheatsheets'
-
 # ALWAYS PROMPT REMOVE -- DON'T BE Stupid
 alias rm="rm -i"
 
-alias btc='/home/$USER/dev/ruby/ruby_api.rb'
-
 alias gitcheat='cat /home/$USER/cheatsheets/git_cheatsheet/git_cheatsheet'
-alias chromeclear='rm -rf ~/.cache/google-chrome'
 alias cpvimrc='cp /home/$USER/.vimrc /home/$USER/github/vim_dotfile/'
 alias cpbashrc='cp /home/$USER/.bashrc /home/$USER/github/bashrc/'
 
 alias editvimcheat=' vim /home/$USER/cheatsheets/vim_cheatsheet/vim_cheatsheet'
 alias editdockercheat=' vim /home/$USER/cheatsheets/docker_cheatsheet/docker_cheatsheet'
-alias editgitcheat=' vim /home/$USER/cheatsheets/git_cheatsheet/git_cheatsheet'
 alias editbashrc='vim /home/$USER/.bashrc'
 alias editvimrc='vim /home/$USER/.vimrc'
 alias todo='vim ~/$USER/Desktop/TODO'
 
-#calendar
 alias dual_monitor_office='~/.screenlayout/dual_screen_big.sh'
 alias single_monitor='~/.screenlayout/single_monitor.sh'
 alias external_monitor='~/.screenlayout/external_monitor.sh'
