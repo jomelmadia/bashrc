@@ -2,7 +2,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
-# Other additional aliases 
+# Additional SSH alias
 source ~/.additional_alias/ssh_server
 source ~/.additional_alias/*
 
@@ -196,3 +196,9 @@ export NVM_DIR="$HOME/.nvm"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color fg:240,bg:230,hl:33,fg+:241,bg+:221,hl+:33
+--color info:33,prompt:33,pointer:166,marker:166,spinner:33'
+
