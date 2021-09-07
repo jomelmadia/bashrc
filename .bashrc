@@ -2,7 +2,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 
-# Other additional aliases 
+# Additional SSH alias
 source ~/.additional_alias/ssh_server
 source ~/.additional_alias/*
 
@@ -136,10 +136,7 @@ alias gprod='git pull --rebase origin develop'
 alias gitgraph='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias mc='EDITOR=sublime mc'
 alias gp='git push origin HEAD'
-alias cdd='cd ~/development'
-alias cdinv='cd ~/development/inventory_system'
-alias cdpc='cd ~/development/pc-api'
-alias opta='cd ~/teravibe/opta'
+alias gcm='git commit -m'
 
 function gg { git grep -n -i "$*";  }
 
@@ -180,6 +177,10 @@ alias rdbms='rails db:migrate:status'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$PATH:$HOME/.rvm/bin"
 
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
+--color info:108,prompt:109,spinner:108,pointer:168,marker:168'
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
@@ -191,3 +192,5 @@ export NVM_DIR="$HOME/.nvm"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+
+
