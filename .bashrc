@@ -68,21 +68,13 @@ color_prompt=yes
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
 if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u@\h]\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
- PS1='${debian_chroot:+($debian_chroot)}\u\w$(parse_git_branch)\$ '
+ PS1='${debian_chroot:+($debian_chroot)}[\u@\h]\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -99,8 +91,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#tmux quick sessiong 
-alias tns='tmux new -s'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -146,6 +136,10 @@ alias gprod='git pull --rebase origin develop'
 alias gitgraph='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias mc='EDITOR=sublime mc'
 alias gp='git push origin HEAD'
+alias cdd='cd ~/development'
+alias cdinv='cd ~/development/inventory_system'
+alias cdpc='cd ~/development/pc-api'
+alias opta='cd ~/teravibe/opta'
 
 function gg { git grep -n -i "$*";  }
 
@@ -171,10 +165,11 @@ alias editbashrc='vim /home/$USER/.bashrc'
 alias editvimrc='vim /home/$USER/.vimrc'
 alias todo='vim ~/$USER/Desktop/TODO'
 
-#calendar
+# monitor config
 alias dual_monitor_office='~/.screenlayout/dual_screen_big.sh'
 alias single_monitor='~/.screenlayout/single_monitor.sh'
 alias external_monitor='~/.screenlayout/external_monitor.sh'
+
 alias caly='cal -y'
 
 # Rails laziness
