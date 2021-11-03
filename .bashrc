@@ -163,6 +163,8 @@ alias editvimrc='vim /home/$USER/.vimrc'
 alias todo='vim ~/$USER/Desktop/TODO'
 
 # monitor config
+# GENERATED USING ARANDR
+
 alias dual_monitor_office='~/.screenlayout/dual_screen_big.sh'
 alias single_monitor='~/.screenlayout/single_monitor.sh'
 alias external_monitor='~/.screenlayout/external_monitor.sh'
@@ -174,9 +176,7 @@ alias rdbcms='rails db:create && rails db:migrate && rails db:seed'
 alias rdbm='rails db:migrate'
 alias rdbms='rails db:migrate:status'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-#export PATH="$PATH:$HOME/.rvm/bin"
-
+# FZF COLOR THEME
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color fg:242,bg:236,hl:65,fg+:15,bg+:239,hl+:108
 --color info:108,prompt:109,spinner:108,pointer:168,marker:168'
