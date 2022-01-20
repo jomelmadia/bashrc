@@ -140,7 +140,7 @@ alias gcm='git commit -m'
 
 function gg { git grep -n -i "$*";  }
 
-alias tmuxload='tmux source-file ~/dotfiles/.tmux.conf'
+alias tmuxload='tmux source-file ~/.tmux.conf'
 alias pingg='ping 8.8.8.8'
 
 alias cheatsh='cd ~/Documents/cheatsheets'
