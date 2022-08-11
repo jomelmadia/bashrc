@@ -127,7 +127,7 @@ alias suup='sudo apt update && sudo apt upgrade -y'
 
 #git 
 alias gprom='git pull --rebase origin master'
-alias gb='git branch'
+alias gb='git branch  -v --sort=-committerdate'
 alias gst='git status'
 alias gl='git log --abbrev-commit --stat'
 alias gl1='git log --pretty=format:"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(7)%aN%Cred%d %Creset%s" --date=format:"%a %D"'
@@ -136,6 +136,7 @@ alias gprod='git pull --rebase origin develop'
 alias gitgraph='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 alias mc='EDITOR=sublime mc'
 alias gp='git push origin HEAD'
+alias gcm='git commit -m'
 alias gcm='git commit -m'
 
 function gg { git grep -n -i "$*";  }
